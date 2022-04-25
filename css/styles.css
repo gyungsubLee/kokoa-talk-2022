@@ -1,0 +1,67 @@
+/* import 순서 중요!! */
+/* why? reset.css이나 varriable.css가 다른 .css보다 밑에서 import되면 적용이 안된다. */
+/* -> 가장 많이 중복되는 font, reset, 변수 등을 먼저 import한다. */
+
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/alt-screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/no-mobile.css";
+
+/* Screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+body {
+  color: #2e363e;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+@keyframes icon_emotion{
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    15% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    20% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    25% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+    32% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    37% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    50% {
+        transform: scale3d(1, 1, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+i:hover {
+    animation: icon_emotion 1.5s linear infinite;
+}

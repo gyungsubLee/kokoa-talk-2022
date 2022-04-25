@@ -1,0 +1,3 @@
+# KOKOA CLONE 2022 UPDATE
+
+부족한 CSS 실력을 바꾸기 위한 노력... 
